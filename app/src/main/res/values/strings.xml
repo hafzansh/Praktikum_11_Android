@@ -12,4 +12,5 @@
     <string name="email">E-Mail</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="splash_icon">Splash Icon</string>
 </resources>
