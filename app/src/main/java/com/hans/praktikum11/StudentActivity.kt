@@ -4,8 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
+import android.provider.Settings
 import kotlinx.android.synthetic.main.activity_student.*
 
 class StudentActivity : AppCompatActivity() {
@@ -38,5 +41,18 @@ class StudentActivity : AppCompatActivity() {
             val i = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phone"))
             startActivity(i)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.change_language_settings){
+            val i = Intent(Settings.ACTION_LOCALE_SETTINGS)
+            startActivity(i)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
