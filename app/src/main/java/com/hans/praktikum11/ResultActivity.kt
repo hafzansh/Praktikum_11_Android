@@ -9,6 +9,8 @@ import kotlinx.android.synthetic.main.activity_result.*
 class ResultActivity : AppCompatActivity() {
 
     companion object{
+
+        const val EXTRA_STUDENT = "student"
         const val EXTRA_ID = "id_student"
         const val EXTRA_NAME = "name_student"
         const val EXTRA_PHONE = "phone_student"
@@ -21,10 +23,14 @@ class ResultActivity : AppCompatActivity() {
         val stName = findViewById<TextView>(R.id.r_student_name)
         val stPhone = findViewById<TextView>(R.id.r_student_phone)
 
-        stId.text = intent.getStringExtra(EXTRA_ID)
-        stName.text = intent.getStringExtra(EXTRA_NAME)
-        stPhone.text = intent.getStringExtra(EXTRA_PHONE)
 
+
+        val student = intent.getParcelableExtra<Student>(EXTRA_STUDENT)
+        if (student != null) {
+            stId.text = student.id
+            stName.text = student.name
+            stPhone.text = student.phone
+        }
         back_button.setOnClickListener{
             finish()
         }

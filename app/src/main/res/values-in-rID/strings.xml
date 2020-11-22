@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Praktikum 11</string>
+    <string name="action_settings">Pengaturan</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="email">Surel</string>
+    <string name="password">Kata Sandi</string>
+    <string name="login">Masuk</string>
+    <string name="splash_icon">Ikon Splash</string>
+    <string name="student_id">ID Siswa</string>
+    <string name="student_name">Nama Siswa</string>
+    <string name="phone_number">No. Handphone</string>
+    <string name="save">Simpan</string>
+    <string name="back">Kembali</string>
+    <string name="call">Panggil</string>
+    <string name="change_language">Ganti Bahasa</string>
+</resources>

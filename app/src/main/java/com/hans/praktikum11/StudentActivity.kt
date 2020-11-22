@@ -26,10 +26,11 @@ class StudentActivity : AppCompatActivity() {
             val id = stId.text.toString()
             val name = stName.text.toString()
             val phone = stPhone.text.toString()
+
+            val student = Student(id,name,phone)
             val i = Intent(this,ResultActivity::class.java)
-            i.putExtra(ResultActivity.EXTRA_ID,id)
-            i.putExtra(ResultActivity.EXTRA_NAME,name)
-            i.putExtra(ResultActivity.EXTRA_PHONE,phone)
+            i.putExtra(ResultActivity.EXTRA_STUDENT,student)
+
             startActivity(i)
         }
         call.setOnClickListener {
